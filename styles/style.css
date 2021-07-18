@@ -1,0 +1,23 @@
+h4{
+    font-weight: 450;
+    text-align: left;   
+}
+li{
+    margin-top: 16px;
+}
+.add{
+    font-size: larger;
+
+}
+.addSpan{
+    font-weight: bold;
+}
+.container{
+    background-color: rgb(255, 219, 225);
+}
+body{
+    background-color: rgb(183, 255, 231);
+}
+/* .form-control{
+    margin-bottom: 10%;
+} */
