@@ -29,13 +29,16 @@ input[type=text]:focus{
     font-weight: 500;
     background: #ea94f1;
 }
+.todos li:hover{
+    text-decoration: underline;
+}
 .check{
   cursor: pointer; /* changes the cursor type when hovering over the chek object in the list */
 }
 
 .add{
     text-shadow: rgb(26, 23, 23) 5px 5px 5px;
-    color:rgba(223, 203, 31, 0.99); 
+    color:rgba(241, 113, 192, 0.99); 
     font-weight: bold;  
     font-size: large;
 }
