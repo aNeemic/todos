@@ -85,5 +85,5 @@ header{
 }
 
 .filtered{
-    display: none !important; /* the important tag is to ensure the hide function overwrrites whatever other display styles may have been applied elsewhere
+    display: none !important; /* the important tag is to ensure the hide function overwrrites whatever other display styles may have been applied elsewhere */
 }
