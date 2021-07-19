@@ -30,3 +30,11 @@ addForm.addEventListener('submit', e=>{
     addForm.reset(); // use this method for forms queried on the dom to reset all the input fields inside that specific form 
     }
 });
+
+//delete todos
+list.addEventListener('click', e=> {
+
+    if(e.target.classList.contains('check')){   //checks the class list of the target element to find the check class
+        e.target.parentElement.remove();    //if true remove the item from the list
+    } 
+})
