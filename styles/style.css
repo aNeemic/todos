@@ -50,7 +50,6 @@ input[type=text]:focus{
 }
 
 .container{
-    /*background-color: rgb(253, 228, 232) ;*/
     max-width: 400px;
     background-blend-mode:overlay;
     border-radius: 10px;
@@ -69,15 +68,10 @@ body{
 }
 
 .bg-img{
-    opacity: 0.1;
     @media (max-width: 992px){
         height: 100vh;
     }
 }
-
-/* .form-control{
-    margin-bottom: 10%;
-} */
 
 header{
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
