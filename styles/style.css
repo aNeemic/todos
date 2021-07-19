@@ -1,13 +1,21 @@
 h3{
-    font-weight: 600;
+    font-weight: bold;
     text-align: left; 
-    color:rgb(39, 23, 39);
-    text-shadow: rgb(236, 236, 236) 2px 2px 2px; 
+    color: pink;
+    text-shadow: rgb(0, 0, 0) 3px 5px 5px; 
 }
 
 h1{
-    text-shadow: rgb(204, 201, 201) 3px 4px 3px;
-    color:rgb(46, 3, 46);
+    text-shadow: rgb(43, 41, 41) 4px 5px 5px;
+    color:rgba(216, 37, 216, 0.99);
+    font-weight: bolder;
+    background-color: rgba(255, 169, 226, 0.7);
+    border: 5px purple solid;
+    border-radius: 12px;
+}
+
+.form-control::placeholder { 
+    color: white;
 }
 input[type=text],
 input[type=text]:focus{
@@ -22,20 +30,20 @@ input[type=text]:focus{
     background: #ea94f1;
 }
 .check{
-  cursor: pointer;
+  cursor: pointer; /* changes the cursor type when hovering over the chek object in the list */
 }
 
 .add{
-   color: rgb(111, 22, 255); 
-   text-shadow: rgb(133, 129, 129) 2px 2px 2px;  
-   font-weight: bold;  
-   font-size: large;
+    text-shadow: rgb(26, 23, 23) 5px 5px 5px;
+    color:rgba(223, 203, 31, 0.99); 
+    font-weight: bold;  
+    font-size: large;
 }
 .addSpan{
     font-size: larger;
     font-weight: bold;
     color: pink;
-    text-shadow: rgb(0, 0, 0) 2px 2px 2px; 
+    text-shadow: rgb(0, 0, 0) 3px 3px 3px; 
 }
 
 .container{
@@ -71,4 +79,8 @@ body{
 header{
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
     
+}
+
+.filtered{
+    display: none !important; /* the important tag is to ensure the hide function overwrrites whatever other display styles may have been applied elsewhere
 }

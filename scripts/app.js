@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.add'); // create a variable to hold the input from the input field
 const list = document.querySelector('.todos');
+const search = document.querySelector('.search input');
 
 
 //creating a function to update the to do list with the user entry in the input field. outside of function to make it more versatile and usable
@@ -17,7 +18,7 @@ const generalTemplate = todo => {       // no parenthesis b/c one argument
 };
 
 
-// adding an event listener for the submit action
+// adding todos
 addForm.addEventListener('submit', e=>{
 
 
@@ -25,16 +26,33 @@ addForm.addEventListener('submit', e=>{
     e.preventDefault();
     const todo = addForm.add.value.trim(); //note .trim removes the white space from a user input string 
 
-    if(todo.length){ //if length is a postive value it evaluates to true and runs the created function below it, will not run with empty submit
+    if(todo.length){    //if length is a postive value it evaluates to true and runs the created function below it, will not run with empty submit
     generalTemplate(todo); //generating an html template from the function and then passing the todo variable inside it
-    addForm.reset(); // use this method for forms queried on the dom to reset all the input fields inside that specific form 
+    addForm.reset();    // use this method for forms queried on the dom to reset all the input fields inside that specific form 
     }
 });
 
-//delete todos
+//removing todos
 list.addEventListener('click', e=> {
 
     if(e.target.classList.contains('check')){   //checks the class list of the target element to find the check class
         e.target.parentElement.remove();    //if true remove the item from the list
     } 
-})
+});
+
+const filterTodos = (term) => {
+
+    Array.from(list.children)   //create an array of items that DO NOT match
+        .filter((todo)=>!todo.textContent.toLowerCase().includes(term))     //note: switches the user input to lowercase for strict comparison reasons 
+        .forEach((todo) => todo.classList.add('filtered')) //Hide the unwanted todos (add filtered tag)
+
+    Array.from(list.children) //creating a filtered array of the items that do match 
+        .filter((todo)=> todo.textContent.toLowerCase().includes(term)) //note: switches the user input to lowercase for strict comparison reasons
+        .forEach((todo) => todo.classList.remove('filtered')) // remove the filtered array
+};  
+
+//keyup event
+search.addEventListener('keyeup', () => {
+    const term = search.value.trim().toLowerCase(); //grabbing whatever the user types into the search field, note: switches the user input to lowercase for strict comparison reasons
+    filterTodos(term);
+});
