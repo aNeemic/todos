@@ -9,16 +9,21 @@
     <title>Todos</title>
     <script src="https://kit.fontawesome.com/c3adddbba1.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-image" style="
+            background-image: url('images/rocket.gif'); 
+            background-size: 100%;
+            height: 100vh;"
+>
+
     <!--"what you guys dont have a container div?"-->
     <div class="container">
        
         <!--Title section-->
         <header class="text-center text-dark my-4">
-            <h1 class="mb-5 mt-2">Today's Todos!</h1>
-            <h4 class="text-left mb-3">Let's get started</h4>
+            <h1 class="top-header mb-4 mt-2">Today's Todos:</h1>
+            <h3 class="middle-header text-center mb-3">Let's get started!</h3>
             <form class="search">
-              <input class="form-control m-auto" type="text" name="search" placeholder="search your todos" />
+              <input class="form-control m-auto" type="text" name="search" placeholder="Search your todos" />
             </form>
           </header> 
           
@@ -26,22 +31,22 @@
         <ul class="list-group todos mx-auto text-dark">
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <span>Make Todo list app</span>
-                <i class="far fa-trash-alt delete"></i>
+                <i class="fas fa-clipboard-check check"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span>Make weather app</span>
-              <i class="far fa-trash-alt delete"></i>
+              <i class="fas fa-clipboard-check check"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span>study async javascript</span>
-              <i class="far fa-trash-alt delete"></i>
+              <i class="fas fa-clipboard-check check"></i>
             </li>
         </ul> 
 
         <!--section to add more todos-->
         <form class="add text-center my-5">
-            <label class="text-dark mb-2">More todos? <span class="addSpan"> Add them here!</span></label>
-            <input class="form-control m-auto" type="text" name="add" />
+            <label class="mb-2">More to do?  <span class="addSpan">Add it here!</span></label>
+            <input class="form-control m-auto" type="text" name="add"/>
         </form>
         
     </div>

@@ -1,23 +1,74 @@
-h4{
-    font-weight: 450;
-    text-align: left;   
+h3{
+    font-weight: 600;
+    text-align: left; 
+    color:rgb(39, 23, 39);
+    text-shadow: rgb(236, 236, 236) 2px 2px 2px; 
 }
-li{
-    margin-top: 16px;
-}
-.add{
-    font-size: larger;
 
+h1{
+    text-shadow: rgb(204, 201, 201) 3px 4px 3px;
+    color:rgb(46, 3, 46);
+}
+input[type=text],
+input[type=text]:focus{
+    color: rgb(234, 230, 240);
+    border: none;
+    background: rgba(0,0,0,0.2);
+    max-width: 400px;
+}
+.todos li{
+    margin-top: 16px;
+    font-weight: 500;
+    background: #ea94f1;
+}
+.check{
+  cursor: pointer;
+}
+
+.add{
+   color: rgb(111, 22, 255); 
+   text-shadow: rgb(133, 129, 129) 2px 2px 2px;  
+   font-weight: bold;  
+   font-size: large;
 }
 .addSpan{
+    font-size: larger;
     font-weight: bold;
+    color: pink;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px; 
 }
+
 .container{
-    background-color: rgb(255, 219, 225);
+    /*background-color: rgb(253, 228, 232) ;*/
+    max-width: 400px;
+    background-blend-mode:overlay;
+    border-radius: 10px;
+    padding: 5px;
 }
+
 body{
     background-color: rgb(183, 255, 231);
+    @media (max-width: 992px) {
+        height: 75%;
+        width: 5%;
+        font-size: small;
+        align-content: center;
+        overflow-wrap: break-word;
+    };
 }
+
+.bg-img{
+    opacity: 0.1;
+    @media (max-width: 992px){
+        height: 100vh;
+    }
+}
+
 /* .form-control{
     margin-bottom: 10%;
 } */
+
+header{
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    
+}
